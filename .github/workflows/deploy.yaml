@@ -13,4 +13,4 @@ jobs:
       - run: docker run -e CI=true darpan/react-test npm test
 
       - name: Generate deployment package
-      - run: zip -r deploy.zip . -x '*.git*'
+        run: zip -r deploy.zip . -x '*.git*'
