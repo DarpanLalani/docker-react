@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: docker build -t darpan/react-test -f Dockerfile .
+      - run: docker build -t darpan/react-test -f Dockerfile.dev .
       - run: docker run -e CI=true darpan/react-test npm test
 
       - name: Generate deployment package
